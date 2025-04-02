@@ -4,49 +4,61 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Interactive Lecture Series</title>
+  <title>Beyond Bias</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/main.css">
+
+  <!--FONT IMPORT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <style>
-   
-  </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+      </style>
+
 </head>
 
 <body>
 
-  <div id="mainButton"></div>
+
+<!-------------------------HOME PAGE------------------------------->
+
+    <div id="mainButton"></div>
+
+    <div id ="box"></div>
+
+
+<!-------------------------INSIDE PAGE------------------------------->
 
   <div id="titles">
-    <h1>Beyond Bias: Building inclusive global creative collaboration</h1>
+    <h1>Beyond Bias</h1>
+    <p id="subheader">Building inclusive global creative collaboration</p>
     <h2>International Lecture Series</h2>
   </div>
 
-  <div class="nav-button" style="top: 33%; left: 40%" data-speaker="maria-carolina-cambre"></div>
-  <div class="nav-button" style="top: 33%; left: 60%" data-speaker="isabel-machado"></div>
-  <div class="nav-button" style="top: 66%; left: 40%" data-speaker="daniel-wildberger"></div>
-  <div class="nav-button" style="top: 66%; left: 60%" data-speaker="shima-rashnoodi"></div>
+    <div class="nav-button" style="top: 35%; left: 20%" data-speaker="maria-carolina-cambre"></div>
+    <div class="nav-button" style="top: 35%; left: 40%" data-speaker="isabel-machado"></div>
+    <div class="nav-button" style="top: 35%; left: 60%" data-speaker="daniel-wildberger"></div>
+    <div class="nav-button" style="top: 35%; left: 80%" data-speaker="shima-rashnoodi"></div>
 
   <div id="speakers">
     <section class="event" id="maria-carolina-cambre">
-      <h3>Dr. Maria-Carolina Cambre</h3>
-      <div class="date">January 28th, 2025</div>
-      <div class="time">9:00am EST</div>
-      <div class="location">Virtual (Teams)</div>
+        <h3>Dr. Maria-Carolina Cambre</h3>
+        <div class="date">January 28th, 2025</div>
+        <div class="time">9:00am EST</div>
+        <div class="location">Virtual (Teams)</div>
       <div class="info">
-        <h4>Bio</h4>
-        <p>Cambre is an Argentine/Canadian scholar who explores vernacular visual expression asking: How do people produce and direct the visual space. How is the image a doing? What are the social and cultural work/ings of images? – Ideas explored in her latest article, “The Atopic Image” (Visual Studies June 2023: 38:2, 199-202). Lately, her research focuses on visual processes of legitimation, representation of online sharing, the visual politics of identity, and polymedia literacies.</p>
-        <h4>Lecture: Contesting the colonial eye: “Burning the Mona Lisa”</h4>
-        <p>This workshop/discussion will present ideas to work through and think about everyday resistant or subversive interactions to the colonial difference taking into consideration the affordances of international collaboration. Contesting the coloniality of how our subjectivities are being produced through capitalistic culture, I follow Argentine feminist scholar Maria Lugones in looking at “the liberation, as both adaptive and tension between subjectification and active subjectivity, that minimal sense of agency of the modern subject” (Lugones 2003).</p>
-        <div class="external_links">
-          <a href="https://www.concordia.ca/faculty/carolina-cambre.html">Concordia University Profile</a>
+          <h4>Bio</h4>
+          <p>Cambre is an Argentine/Canadian scholar who explores vernacular visual expression asking: How do people produce and direct the visual space. How is the image a doing? What are the social and cultural work/ings of images? – Ideas explored in her latest article, “The Atopic Image” (Visual Studies June 2023: 38:2, 199-202). Lately, her research focuses on visual processes of legitimation, representation of online sharing, the visual politics of identity, and polymedia literacies.</p>
+          <h4>Lecture: Contesting the colonial eye: “Burning the Mona Lisa”</h4>
+          <p>This workshop/discussion will present ideas to work through and think about everyday resistant or subversive interactions to the colonial difference taking into consideration the affordances of international collaboration. Contesting the coloniality of how our subjectivities are being produced through capitalistic culture, I follow Argentine feminist scholar Maria Lugones in looking at “the liberation, as both adaptive and tension between subjectification and active subjectivity, that minimal sense of agency of the modern subject” (Lugones 2003).</p>
+          <div class="external_links">
+            <a href="https://www.concordia.ca/faculty/carolina-cambre.html">Concordia University Profile</a>
+          </div>
         </div>
-      </div>
     </section>
 
-    <section class="event" id="isabel-machado" onclick="move()">
+    <section class="event" id="isabel-machado">
       <h3>Dr. Isabel Machado</h3>
       <div class="date">February 5th, 2025</div>
       <div class="time">1:00pm EST</div>
@@ -94,46 +106,44 @@
         </div>
     </section>
 
+
   </div>
+
 
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
   <script>
+    addEventListener('click', createBox);
 
-    function move() {
-        let img = document.getElementsByClassName('event')
-        img.style.left = Math.floor(Math.random() * window.innerWidth) + "px"
-        img.style.top = Math.floor(Math.random() * window.innerHeight) + "px"
-    }
+function createBox(event) {
+    var box = document.createElement('div');
+    box.style.visibility="visible";
+    box.className = 'box';
+    box.style.left = event.pageX + 'px';
+    box.style.top = event.pageY + 'px';
+    document.body.appendChild(box);
+}
 
-     // Main button hover
-     $('#mainButton').hover(function(){
-        //when hovering
-        $("#hover").css("background", "rgb(41, 61, 182)");
-    },
-    function(){
-        //not hovering
-        $("#hover").css("background", "rgb(31, 51, 152)");
-    });
 
-    $(document).ready(function () {
+   $(document).ready(function () {
       let expanded = false;
 
-      // Main button click handler
-      $('#mainButton').click(function () {
-        const button = $(this);
+    // Main button click handler
+    $('#mainButton').click(function () {
+      const button = $(this);
 
-        if (!expanded) {
-          // Expand animation and title animation
-          button.animate({
-            width: '7000px',
-            height: '7000px',
-            top: '10px',
-            right: '10px',
-          }, 800, 'linear', function () {
-            expanded = true;
-          });
+      if (!expanded) {
+        // Expand animation and title animation
+        button.animate({
+          width: '7000px',
+          height: '7000px',
+          top: '10px',
+          right: '10px',
+        }, 800, 'linear', function () {
+          expanded = true;
+        });
 
           // Title animations
           //$('#titles h1').animate({
@@ -146,7 +156,7 @@
 
           // Navigation button appearance
           $('.nav-button').each(function (index) {
-            $(this).delay(10 * index).queue(function () {
+            $(this).delay(100 * index).queue(function () {
               $(this).addClass('visible').dequeue();
             });
           });
@@ -169,6 +179,7 @@
             //opacity: 0
           //}, 800);
 
+          $(".box").hide();
           $('.nav-button').removeClass('visible');
           $('#speakers section').removeClass('active'); 
         }
@@ -185,6 +196,8 @@
         $('#speakers section#' + speakerId).addClass('active');
       });
     });
+
+
   </script>
 </body>
 
