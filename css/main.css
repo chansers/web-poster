@@ -42,20 +42,20 @@
     background-color: #1F3398;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 2;
+    z-index: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
 
 #mainButton:hover {
     border: 7px #5d78ff solid;
     transition: 0.2s;
-  }
+}
 
 #mainButton.expanded {
     transform: scale(40) translate(-50%, -50%);
-    z-index: -1000;
+    z-index: -100;
 }
 
 
@@ -63,10 +63,10 @@
     padding: 30px;
     margin-left: -30px;
     margin-top: -30px;
-    background-color: #5d78ff;
+    background-color: #9db8ff;
     position: absolute;
     border-radius: 12cap;
-  }
+}
 
 
 

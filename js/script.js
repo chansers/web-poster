@@ -13,20 +13,21 @@ function createBox(event) {
    $(document).ready(function () {
       let expanded = false;
 
-      // Main button click handler
-      $('#mainButton').click(function () {
-        const button = $(this);
+    // Main button click handler
+    $('#mainButton').click(function () {
+      const button = $(this);
 
-        if (!expanded) {
-          // Expand animation and title animation
-          button.animate({
-            width: '7000px',
-            height: '7000px',
-            top: '10px',
-            right: '10px',
-          }, 800, 'linear', function () {
-            expanded = true;
-          });
+      if (!expanded) {
+        // Expand animation and title animation
+        button.animate({
+          width: '7000px',
+          height: '7000px',
+          top: '10px',
+          right: '10px',
+        }, 800, 'linear', function () {
+          expanded = true;
+        });
+
 
           // Title animations
           //$('#titles h1').animate({
