@@ -28,7 +28,6 @@ function createBox(event) {
           expanded = true;
         });
 
-
           // Title animations
           //$('#titles h1').animate({
             //opacity: 1
@@ -40,7 +39,7 @@ function createBox(event) {
 
           // Navigation button appearance
           $('.nav-button').each(function (index) {
-            $(this).delay(10 * index).queue(function () {
+            $(this).delay(100 * index).queue(function () {
               $(this).addClass('visible').dequeue();
             });
           });
