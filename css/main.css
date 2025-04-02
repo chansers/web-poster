@@ -67,6 +67,7 @@
     position: absolute;
     border-radius: 12cap;
     opacity: 20%;
+    z-index: 1;
 }
 
 
@@ -136,7 +137,8 @@ h4{
     position: fixed;
     width: 30px;
     height: 30px;
-    background-color: #1F3398;
+    background-color: #5d78ff;
+    box-shadow: 7px 7px 8px 4px #0d1e75;
     border: #F2F7F2 2px solid;
     border-radius: 50%;
     cursor: pointer;
