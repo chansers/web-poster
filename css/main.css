@@ -4,22 +4,41 @@
     box-sizing:border-box;
 }
 
-@font-face { font-family: SpaceMono; src: url(/fonts/SpaceMono-Regular.ttf); } 
-@font-face { font-family: SpaceMono; font-weight: bold; src: url(/fonts/SpaceMono-Bold.ttf);}
-@font-face { font-family: SpaceMono; font-weight: italic; src: url(/fonts/SpaceMono-Italic.ttf);}
 
-body {
-    margin: 0;
-    overflow: hidden;
-    font-family: S, sans-serif;
-    background-color: #F2F7F2;
-    color: #1F3398;
+/*  FONTS  */
+
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+
+/*  START PAGE  */
 #mainButton {
     position: fixed;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-color: #1F3398;
     border-radius: 50%;
     cursor: pointer;
@@ -29,9 +48,35 @@ body {
     transform: translate(-50%, -50%);
   }
 
+#mainButton:hover {
+    border: 7px #5d78ff solid;
+    transition: 0.2s;
+  }
+
 #mainButton.expanded {
     transform: scale(40) translate(-50%, -50%);
     z-index: -1000;
+}
+
+
+.box {
+    padding: 30px;
+    margin-left: -30px;
+    margin-top: -30px;
+    background-color: #5d78ff;
+    position: absolute;
+    border-radius: 12cap;
+  }
+
+
+
+/*  TEXT  */
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: "Space Mono", monospace;
+    background-color: #F2F7F2;
+    color: #1F3398;
 }
 
 #titles {
@@ -42,16 +87,24 @@ body {
     justify-content: center;
     align-items: baseline;
     pointer-events: none;
-    font-family: SpaceMono;
+    font-family: "Space Mono", monospace;
     padding: 20px;
     z-index: 10;
     color: #F2F7F2;
 }
 
-#titles h1 {
-    font-size: 70px;
-    line-height: 77px;
+h1 {
+    font-size: 100px;
+    line-height: 85px;
+    padding: 20px;
 }
+
+    #subheader {
+        font-size: 40px;
+        line-height: 45px;
+        position: relative;
+        top: 10%;
+    }
 
 #titles h2 {
     line-height: 28px;
@@ -84,6 +137,11 @@ h4{
     color: #1C110A;
 }
 
+.nav-button:hover {
+    border: #F2F7F2 4px solid;
+    transition: 0.2s;
+}
+
 .nav-button.visible {
     opacity: 1 !important;
     transform: scale(1) !important;
@@ -103,7 +161,7 @@ h4{
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     z-index: 4;
     color: #1F3398;
-    font-family: SpaceMono;
+    font-family: "Space Mono", monospace;
 }
 
 #speakers section.active {
@@ -114,3 +172,4 @@ h4{
 #event {
     position: absolute;
 }
+
