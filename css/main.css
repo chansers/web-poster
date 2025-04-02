@@ -79,32 +79,45 @@ body {
     color: #1F3398;
 }
 
+#subheader {
+    font-size: 40px;
+    line-height: 45px;
+    position: relative;
+    top: 10%;
+    color: #F2F7F2;
+}
+
 #titles {
     position: fixed;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: baseline;
     pointer-events: none;
     font-family: "Space Mono", monospace;
-    padding: 20px;
     z-index: 10;
     color: #F2F7F2;
+    padding: 40px;
 }
 
 h1 {
     font-size: 100px;
     line-height: 85px;
     padding: 20px;
+    z-index: 4;
+    color: #F2F7F2;
 }
 
-    #subheader {
-        font-size: 40px;
-        line-height: 45px;
-        position: relative;
-        top: 10%;
-    }
+#subheader {
+    font-size: 30px;
+    line-height: 35px;
+    justify-items: center;
+    position: static;
+    padding: 20px;
+    z-index: 4;
+    color: #F2F7F2;
+}
 
 #titles h2 {
     line-height: 28px;
