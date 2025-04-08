@@ -118,16 +118,17 @@
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
 
   <script>
-    addEventListener('click', createBox);
 
-function createBox(event) {
-    var box = document.createElement('div');
-    box.style.visibility="visible";
-    box.className = 'box';
-    box.style.left = event.pageX + 'px';
-    box.style.top = event.pageY + 'px';
-    document.body.appendChild(box);
-}
+    // Make click circles
+    addEventListener('click', createBox);
+    function createBox(event) {
+        var box = document.createElement('div');
+        box.style.visibility="visible";
+        box.className = 'box';
+        box.style.left = event.pageX + 'px';
+        box.style.top = event.pageY + 'px';
+        document.body.appendChild(box);
+    }
 
 
    $(document).ready(function () {
