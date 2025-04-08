@@ -8,49 +8,54 @@ html {
     cursor: url(../blueicon.png), auto;
 }
 
-
-
 /*  FONTS  */
 
 .space-mono-regular {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: "Space Mono", monospace;
+    background-color: #F2F7F2;
+    color: #1F3398;
 }
-
-.space-mono-bold {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.space-mono-regular-italic {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.space-mono-bold-italic {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-style: italic;
-}
-
-
 
 
 /*  START PAGE  */
+
 #mainButton {
     position: fixed;
     width: 100px;
     height: 100px;
     background-color: #1F3398;
     border-radius: 50%;
-    z-index: 10;
+    z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 4px 5px 8px 2px #939fd3;
+    box-shadow: 4px 5px 8px 2px #939fd3;  
 }
 
 #mainButton:hover {
@@ -64,7 +69,7 @@ html {
 
 #mainButton.expanded {
     transform: scale(40) translate(-50%, -50%);
-    z-index: -10;
+    z-index: -1000;
 }
 
 
@@ -80,24 +85,6 @@ html {
 }
 
 
-
-/*  TEXT  */
-body {
-    margin: 0;
-    overflow: hidden;
-    font-family: "Space Mono", monospace;
-    background-color: #F2F7F2;
-    color: #1F3398;
-}
-
-#subheader {
-    font-size: 40px;
-    line-height: 45px;
-    position: relative;
-    top: 10%;
-    color: #F2F7F2;
-}
-
 #titles {
     position: fixed;
     width: 100%;
@@ -107,39 +94,18 @@ body {
     align-items: baseline;
     pointer-events: none;
     font-family: "Space Mono", monospace;
+    padding: 20px;
     z-index: 10;
     color: #F2F7F2;
-    padding: 40px;
 }
 
-h1 {
-    font-size: 100px;
-    line-height: 85px;
-    padding: 20px;
-    z-index: 4;
-    color: #F2F7F2;
-}
-
-#subheader {
-    font-size: 30px;
-    line-height: 35px;
-    justify-items: center;
-    position: static;
-    padding: 20px;
-    z-index: 4;
-    color: #F2F7F2;
+#titles h1 {
+    font-size: 70px;
+    line-height: 77px;
 }
 
 #titles h2 {
     line-height: 28px;
-}
-
-h3{
-    font-size: 25px;
-}
-
-h4{
-    font-size: 18px;
 }
 
 .nav-button {
@@ -147,16 +113,16 @@ h4{
     width: 35px;
     height: 35px;
     background-color: #5d78ff;
-    box-shadow: 4px 4px 8px 2px #0d1e75;
     border: #F2F7F2 2px solid;
     border-radius: 50%;
+    cursor: pointer;
     opacity: 0;
     transform: scale(0);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 100;
     display: flex;
     align-items: center;
-    justify-content: left baseline;
+    justify-content: center;
     font-weight: bold;
     color: #1C110A;
 }
@@ -179,17 +145,17 @@ h4{
     display: none;
     /* Initially hide all speaker sections */
     position: fixed;
-    bottom: 5%;
-    left: 5%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 90%;
     max-height: 80%;
     overflow: auto;
     background: #F2F7F2;
-    padding: 20px;
-    box-shadow: 7px 7px 8px 4px rgba(0, 0, 0, 0.2);
-    z-index: 4;
     color: #1F3398;
-    font-family: "Space Mono", monospace;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 4;
 }
 
 #speakers section.active {
@@ -199,4 +165,3 @@ h4{
 #event {
     position: absolute;
 }
-
