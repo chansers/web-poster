@@ -195,8 +195,7 @@ p {
   #scroll-text {
     /* animation properties */
     transform: translateX(100%);
-    
-    animation: my-animation 10s linear infinite;
+    animation: my-animation 15s linear infinite;
   }
   @keyframes my-animation {
     from {
