@@ -34,13 +34,6 @@ html {
     font-style: italic;
   }
   
-body {
-    margin: 0;
-    overflow: hidden;
-    font-family: "Space Mono", monospace;
-    background-color: #F2F7F2;
-    color: #1F3398;
-}
 
 
 /*  START PAGE  */
@@ -85,6 +78,16 @@ body {
 }
 
 
+/*  TYPE  */
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: "Space Mono", monospace;
+    background-color: #F2F7F2;
+    color: #1F3398;
+}
+
 #titles {
     position: fixed;
     width: 100%;
@@ -99,13 +102,34 @@ body {
     color: #F2F7F2;
 }
 
-#titles h1 {
-    font-size: 70px;
-    line-height: 77px;
+h1 {
+    font-size: 100px;
+    line-height: 85px;
+    padding: 20px;
+    z-index: 4;
+    color: #F2F7F2;
+}
+
+#subheader {
+    font-size: 30px;
+    line-height: 35px;
+    justify-items: center;
+    position: static;
+    padding: 20px;
+    z-index: 4;
+    color: #F2F7F2;
 }
 
 #titles h2 {
     line-height: 28px;
+}
+
+h3{
+    font-size: 25px;
+}
+
+h4{
+    font-size: 18px;
 }
 
 .nav-button {
