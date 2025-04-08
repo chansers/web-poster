@@ -175,20 +175,10 @@ h4{
     transform: scale(1) !important;
 }
 
-.nav-button:hover {
-    border: #F2F7F2 4px solid;
-    transition: 0.2s;
-}
-
-.nav-button.visible {
-    opacity: 1 !important;
-    transform: scale(1) !important;
-}
-
 #speakers section {
     display: none;
     /* Initially hide all speaker sections */
-    position: absolute;
+    position: fixed;
     bottom: 5%;
     left: 5%;
     width: 90%;
@@ -196,7 +186,7 @@ h4{
     overflow: auto;
     background: #F2F7F2;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 7px 7px 8px 4px rgba(0, 0, 0, 0.2);
     z-index: 4;
     color: #1F3398;
     font-family: "Space Mono", monospace;
@@ -204,9 +194,9 @@ h4{
 
 #speakers section.active {
     display: block;
-    /* Show the active speaker section */
 }
 
 #event {
     position: absolute;
 }
+
