@@ -44,7 +44,7 @@ html {
     height: 100px;
     background-color: #1F3398;
     border-radius: 50%;
-    z-index: 2;
+    z-index: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -143,7 +143,7 @@ h4{
     opacity: 0;
     transform: scale(0);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 0;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
