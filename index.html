@@ -21,7 +21,6 @@
 <!-------------------------HOME PAGE------------------------------->
 
 <div id="mainButton"></div>
-
 <div id ="box"></div>
 
 
@@ -103,7 +102,6 @@
           <a href="https://pure.buas.nl/en/persons/shima-rezaei-rashnoodi" tagret="_blank">Learn more about the speaker</a>
         </div>
     </section>
-
   </div>
 
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -129,7 +127,7 @@
         const button = $(this);
 
         if (!expanded) {
-          // Expand animation and title animation
+          // Expand main button
           button.animate({
             width: '7000px',
             height: '7000px',
@@ -139,15 +137,14 @@
             expanded = true;
           });
 
-
-          // Navigation button appearance
+          // Show nav buttons
           $('.nav-button').each(function (index) {
             $(this).delay(500 * index).queue(function () {
               $(this).addClass('visible').dequeue();
             });
           });
         } else {
-          // Reverse the animations
+          // Reverse expanded main button
           button.animate({
             width: '80px',
             height: '80px',
@@ -163,13 +160,11 @@
         }
       });
 
-      // Navigation buttons click handler
+      // Nav buttons click handler
       $('.nav-button').click(function () {
         const speakerId = $(this).data('speaker');
-
-        // hide any currently active speaker section
+        // hide the active speaker section
         $('#speakers section.active').removeClass('active');
-
         // show the selected speaker section
         $('#speakers section#' + speakerId).addClass('active');
       });
