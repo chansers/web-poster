@@ -111,12 +111,13 @@ h1 {
 }
 
 #subheader {
-    font-size: 30px;
-    line-height: 35px;
-    justify-items: center;
-    position: static;
     padding: 20px;
     z-index: 4;
+    color: #F2F7F2;
+    font-size: 40px;
+    line-height: 45px;
+    position: relative;
+    top: 10%;
     color: #F2F7F2;
 }
 
