@@ -34,6 +34,16 @@ html {
     font-style: italic;
   }
   
+.archivo {
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 110;
+    letter-spacing: 1px;
+  }
+
 
 
 /*  BUTTONS AND START PAGE  */
@@ -154,6 +164,8 @@ h1 {
     position: relative;
     top: 10%;
     color: #F2F7F2;
+    font-family: "Space Mono", monospace;
+    font-style: italic;
 }
 
 #titles h2 {
@@ -167,6 +179,8 @@ h3{
 
 h4{
     font-size: 22px;
+    line-height: 24px;
+    font-style: italic;
 }
 
 a{
@@ -185,6 +199,9 @@ p {
     padding-left: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
+    font-family: "Archivo", sans-serif;
+    font-size: 16.5px;
+    line-height: 24px;
 }
 
 
