@@ -4,6 +4,11 @@
     box-sizing:border-box;
 }
 
+html {
+    cursor: url(../blueicon.png), auto;
+}
+
+
 
 /*  FONTS  */
 
@@ -41,28 +46,32 @@
     height: 100px;
     background-color: #1F3398;
     border-radius: 50%;
-    cursor: pointer;
-    z-index: 0;
+    z-index: 10;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 4px 5px 8px 2px #939fd3;
 }
 
 #mainButton:hover {
-    border: 7px #5d78ff solid;
+    width: 106px;
+    height: 106px;
+    background-color: #1F3398;
     transition: 0.2s;
+    cursor: url(../whiteicon.png), auto;
+    box-shadow: 8px 9px 8px 2px #939fd3;
 }
 
 #mainButton.expanded {
     transform: scale(40) translate(-50%, -50%);
-    z-index: -100;
+    z-index: -10;
 }
 
 
 .box {
-    padding: 80px;
-    margin-left: -80px;
-    margin-top: -80px;
+    padding: 120px;
+    margin-left: -110px;
+    margin-top: -110px;
     background-color: #5d78ff;
     position: absolute;
     border-radius: 12cap;
@@ -135,13 +144,12 @@ h4{
 
 .nav-button {
     position: fixed;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     background-color: #5d78ff;
-    box-shadow: 7px 7px 8px 4px #0d1e75;
+    box-shadow: 4px 4px 8px 2px #0d1e75;
     border: #F2F7F2 2px solid;
     border-radius: 50%;
-    cursor: pointer;
     opacity: 0;
     transform: scale(0);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -156,6 +164,10 @@ h4{
 .nav-button:hover {
     border: #F2F7F2 4px solid;
     transition: 0.2s;
+    cursor: url(../whiteicon.png), auto;
+    width: 40px;
+    height: 40px;
+    box-shadow: 6px 6px 9px 4px #0d1e75;
 }
 
 .nav-button.visible {
@@ -174,7 +186,7 @@ h4{
     overflow: auto;
     background: #F2F7F2;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 7px 7px 8px 4px rgba(0, 0, 0, 0.2);
     z-index: 4;
     color: #1F3398;
     font-family: "Space Mono", monospace;
