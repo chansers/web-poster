@@ -148,6 +148,15 @@ function createBox(event) {
           expanded = true;
         });
 
+          // Title animations
+          //$('#titles h1').animate({
+            //opacity: 1
+          //}, 1000);
+
+          //$('#titles h2').animate({
+            //opacity: 1
+          //}, 1000);
+
           // Navigation button appearance
           $('.nav-button').each(function (index) {
             $(this).delay(100 * index).queue(function () {
@@ -164,6 +173,14 @@ function createBox(event) {
           }, 800, 'linear', function () {
             expanded = false;
           });
+
+          //$('#titles h1').animate({
+            //opacity: 0
+          //}, 800);
+
+          //$('#titles h2').animate({
+            //opacity: 0
+          //}, 800);
 
           $(".box").hide();
           $('.nav-button').removeClass('visible');
