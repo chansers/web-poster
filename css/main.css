@@ -36,7 +36,7 @@ html {
   
 
 
-/*  START PAGE  */
+/*  BUTTONS AND START PAGE  */
 
 #mainButton {
     position: fixed;
@@ -67,15 +67,50 @@ html {
 
 
 .box {
-    padding: 120px;
-    margin-left: -110px;
-    margin-top: -110px;
+    padding: 80px;
+    margin-left: -70px;
+    margin-top: -70px;
     background-color: #5d78ff;
     position: absolute;
     border-radius: 12cap;
     opacity: 20%;
     z-index: 1;
 }
+
+.nav-button {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: #5d78ff;
+    border: #F2F7F2 2px solid;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #1C110A;
+}
+
+.nav-button:hover {
+    border: #F2F7F2 4px solid;
+    transition: 0.2s;
+    cursor: url(../whiteicon.png), auto;
+    width: 45px;
+    height: 45px;
+    box-shadow: 6px 6px 9px 4px #0d1e75;
+}
+
+.nav-button.visible {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+
+
 
 
 /*  TYPE  */
@@ -126,44 +161,52 @@ h1 {
 }
 
 h3{
-    font-size: 25px;
+    font-size: 30px;
+    font-style: italic;
 }
 
 h4{
+    font-size: 22px;
+}
+
+a{
+    color: #F2F7F2;
+    text-align: right;
+}
+
+a:hover {
+    color: #939fd3;
+    font-style: italic;
     font-size: 18px;
-}
-
-.nav-button {
-    position: fixed;
-    width: 35px;
-    height: 35px;
-    background-color: #5d78ff;
-    border: #F2F7F2 2px solid;
-    border-radius: 50%;
-    opacity: 0;
-    transform: scale(0);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #1C110A;
-}
-
-.nav-button:hover {
-    border: #F2F7F2 4px solid;
     transition: 0.2s;
-    cursor: url(../whiteicon.png), auto;
-    width: 40px;
-    height: 40px;
-    box-shadow: 6px 6px 9px 4px #0d1e75;
 }
 
-.nav-button.visible {
-    opacity: 1 !important;
-    transform: scale(1) !important;
+p {
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
+
+
+#scroll-container {
+    overflow: hidden;
+  }
+  
+  #scroll-text {
+    /* animation properties */
+    transform: translateX(100%);
+    
+    animation: my-animation 10s linear infinite;
+  }
+  @keyframes my-animation {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+  
 
 #speakers section {
     display: none;
@@ -175,8 +218,8 @@ h4{
     width: 90%;
     max-height: 80%;
     overflow: auto;
-    background: #F2F7F2;
-    color: #1F3398;
+    background: #1F3398;
+    color: #F2F7F2;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     z-index: 4;
@@ -184,6 +227,7 @@ h4{
 
 #speakers section.active {
     display: block;
+    cursor: url(../whiteicon.png), auto;
 }
 
 #event {
