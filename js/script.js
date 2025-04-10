@@ -1,50 +1,43 @@
+//this is the same as the script in the index file, it's just here for show because it doesn't work when I link to this file from the index
+
+// CLICK CIRCLES
 addEventListener('click', createBox);
+      function createBox(event) {
+          var box = document.createElement('div');
+          box.style.visibility="visible";
+          box.className = 'box';
+          box.style.left = event.pageX + 'px';
+          box.style.top = event.pageY + 'px';
+          document.body.appendChild(box);
+      }
+      //used this to help me code this function: https://stackoverflow.com/questions/52798687/make-a-button-to-create-boxes
 
-function createBox(event) {
-    var box = document.createElement('div');
-    box.style.visibility="visible";
-    box.className = 'box';
-    box.style.left = event.pageX + 'px';
-    box.style.top = event.pageY + 'px';
-    document.body.appendChild(box);
-}
-
-
-   $(document).ready(function () {
+  // BUTTON FUNCTIONS
+    $(document).ready(function () {
       let expanded = false;
 
-    // Main button click handler
-    $('#mainButton').click(function () {
-      const button = $(this);
+      $('#mainButton').click(function () {
+        const button = $(this);
 
-      if (!expanded) {
-        // Expand animation and title animation
-        button.animate({
-          width: '7000px',
-          height: '7000px',
-          top: '10px',
-          right: '10px',
-        }, 800, 'linear', function () {
-          expanded = true;
-        });
+        if (!expanded) {
+          // expand main button
+          button.animate({
+            width: '7000px',
+            height: '7000px',
+            top: '10px',
+            right: '10px',
+          }, 800, 'linear', function () {
+            expanded = true;
+          });
 
-          // Title animations
-          //$('#titles h1').animate({
-            //opacity: 1
-          //}, 1000);
-
-          //$('#titles h2').animate({
-            //opacity: 1
-          //}, 1000);
-
-          // Navigation button appearance
+          // show nav buttons
           $('.nav-button').each(function (index) {
-            $(this).delay(100 * index).queue(function () {
+            $(this).delay(500 * index).queue(function () {
               $(this).addClass('visible').dequeue();
             });
           });
         } else {
-          // Reverse the animations
+          // reverse animations
           button.animate({
             width: '80px',
             height: '80px',
@@ -54,29 +47,18 @@ function createBox(event) {
             expanded = false;
           });
 
-          //$('#titles h1').animate({
-            //opacity: 0
-          //}, 800);
-
-          //$('#titles h2').animate({
-            //opacity: 0
-          //}, 800);
-
           $(".box").hide();
           $('.nav-button').removeClass('visible');
           $('#speakers section').removeClass('active'); 
         }
       });
 
-      // Navigation buttons click handler
+      //nav buttons click handler
       $('.nav-button').click(function () {
         const speakerId = $(this).data('speaker');
-
-        // hide any currently active speaker section
+        // hide active speaker section
         $('#speakers section.active').removeClass('active');
-
-        // show the selected speaker section
+        // show selected speaker section
         $('#speakers section#' + speakerId).addClass('active');
       });
     });
-

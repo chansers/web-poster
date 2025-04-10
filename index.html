@@ -38,11 +38,12 @@
   <div class="nav-button" style="top: 35%; left: 60%" data-speaker="daniel-wildberger"></div>
   <div class="nav-button" style="top: 35%; left: 80%" data-speaker="shima-rashnoodi"></div>
 
+
   <div id="speakers">
     <section class="event" id="maria-carolina-cambre">
       <h3>Dr. Maria-Carolina Cambre</h3>
       <div id="scroll-container">
-        <div id="scroll-text"> January 28th, 2025  •   9:00am EST   •   Virtual (Teams)</div>
+        <div id="scroll-text"> January 28th, 2025  •  9:00am EST  •  Virtual (Teams)</div>
       </div>
       <div class="info">
         <h4>Bio</h4>
@@ -55,7 +56,7 @@
       </div>
     </section>
 
-    <section class="event" id="isabel-machado" onclick="move()">
+    <section class="event" id="isabel-machado">
       <h3>Dr. Isabel Machado</h3>
       <div id="scroll-container">
         <div id="scroll-text"> February 5th, 2025 •  1:00pm EST  •  Virtual (Teams)</div>
@@ -108,7 +109,9 @@
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
   <script>
-
+    //for some reason, I couldn't get the script to run when I put in a separate file. It would work on my computer but not when I uploaded it onto github. Keeping the script in the html file was the only way I found that worked for the github upload
+  
+    // CLICK CIRCLES
   addEventListener('click', createBox);
       function createBox(event) {
           var box = document.createElement('div');
@@ -118,16 +121,17 @@
           box.style.top = event.pageY + 'px';
           document.body.appendChild(box);
       }
+       //used this to help me code this function: https://stackoverflow.com/questions/52798687/make-a-button-to-create-boxes
 
+  // BUTTON FUNCTIONS
     $(document).ready(function () {
       let expanded = false;
 
-      // Main button click handler
       $('#mainButton').click(function () {
         const button = $(this);
 
         if (!expanded) {
-          // Expand main button
+          // expand main button
           button.animate({
             width: '7000px',
             height: '7000px',
@@ -137,14 +141,14 @@
             expanded = true;
           });
 
-          // Show nav buttons
+          // show nav buttons
           $('.nav-button').each(function (index) {
             $(this).delay(500 * index).queue(function () {
               $(this).addClass('visible').dequeue();
             });
           });
         } else {
-          // Reverse expanded main button
+          // reverse animations
           button.animate({
             width: '80px',
             height: '80px',
@@ -160,15 +164,16 @@
         }
       });
 
-      // Nav buttons click handler
+      //nav buttons click handler
       $('.nav-button').click(function () {
         const speakerId = $(this).data('speaker');
-        // hide the active speaker section
+        // hide active speaker section
         $('#speakers section.active').removeClass('active');
-        // show the selected speaker section
+        // show selected speaker section
         $('#speakers section#' + speakerId).addClass('active');
       });
     });
+    
   </script>
 </body>
 

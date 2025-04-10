@@ -89,8 +89,8 @@ html {
 
 .nav-button {
     position: fixed;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background-color: #5d78ff;
     border: #F2F7F2 2px solid;
     border-radius: 50%;
@@ -103,14 +103,15 @@ html {
     justify-content: center;
     font-weight: bold;
     color: #1C110A;
+    box-shadow: 2px 3px 6px 2px #0d1e75;  
 }
 
 .nav-button:hover {
     border: #F2F7F2 4px solid;
-    transition: 0.2s;
+    transition: 0.1s;
     cursor: url(../whiteicon.png), auto;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     box-shadow: 6px 6px 9px 4px #0d1e75;
 }
 
@@ -193,6 +194,7 @@ a:hover {
     font-style: italic;
     font-size: 18px;
     transition: 0.2s;
+    cursor: url(../whiteicon.png), auto;
 }
 
 p {
@@ -205,28 +207,10 @@ p {
 }
 
 
-#scroll-container {
-    overflow: hidden;
-  }
-  
-  #scroll-text {
-    /* animation properties */
-    transform: translateX(100%);
-    animation: my-animation 15s linear infinite;
-  }
-  @keyframes my-animation {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-}
-  
+/*  SPEAKER SECTIONS  */
 
 #speakers section {
     display: none;
-    /* Initially hide all speaker sections */
     position: fixed;
     top: 70%;
     left: 50%;
@@ -237,8 +221,22 @@ p {
     background: #1F3398;
     color: #F2F7F2;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     z-index: 4;
+    border-radius: 4cap;
+    animation: glow-flicker 1.5s alternate linear infinite;
+}
+      @keyframes glow-flicker {
+        from {
+            box-shadow: 0 2px 15px #F2F7F2;
+          }
+          to {
+            box-shadow: 0 9px 25px #F2F7F2;
+          }
+      }
+
+.dark-mode {
+    color: #1F3398;
+    background: #F2F7F2;
 }
 
 #speakers section.active {
@@ -249,3 +247,21 @@ p {
 #event {
     position: absolute;
 }
+
+#scroll-container {
+    overflow: hidden;
+  }
+  
+  #scroll-text {
+    transform: translateX(100%);
+    animation: my-animation 15s linear infinite;
+  }
+  @keyframes my-animation {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+} /*got this from https://blog.hubspot.com/website/scrolling-text-css*/
+  
